@@ -31,7 +31,7 @@ class UserList extends Component {
     // }
     renderUsers = (user) => (
         user ? user.map((item,i) => (
-            <div  key={i} className="">
+            <div  key={i} className="userItem">
                 <input type="checkbox" onClick={() => this.handleCheckBox(item.name)} />
                 <p onClick={() => this.pickUser(item)}>{item.name}</p>
             </div>

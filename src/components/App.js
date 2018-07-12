@@ -63,7 +63,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           {/* <h1 className="App-title">Add Coupons UI</h1> */}
-          <button onClick={this.openModal}>Open Modal</button>
+          <button onClick={this.openModal}>Add User</button>
 
         </header>
         <div className="App-intro">
@@ -81,24 +81,22 @@ class App extends Component {
           contentLabel="Example Modal"
           style={customStyles}
         >
- 
           <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
-          <button onClick={this.closeModal}>close</button>
-          <div>I am a modal</div>
           <form>
             <div>
-              <input type="text" name="name" placeholder="Name" onBlur={this.handleNameChange} />
+              <input className="inputStyle" type="text" name="name" placeholder="Name" onBlur={this.handleNameChange} />
             </div>
             <div>
-              <input type="text" name="id" placeholder="Id" onBlur={this.handleIdChange} />
+              <input className="inputStyle" type="text" name="id" placeholder="Id" onBlur={this.handleIdChange} />
             </div>
             <div>
-            <textarea type="text" name="description" placeholder="Description" onBlur={this.handleDescriptionChange}></textarea>
+            <textarea className="inputStyle" type="text" name="description" placeholder="Description" onBlur={this.handleDescriptionChange}></textarea>
             </div> 
             <div>
               <input type="submit" onClick={this.handleSubmit} />
               </div>           
           </form>
+          <button onClick={this.closeModal}>close</button>
         </Modal>
 
       </div>
